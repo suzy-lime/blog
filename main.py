@@ -68,7 +68,7 @@ class Comment(db.Model):
     post_id = db.Column(db.Integer, ForeignKey("blog_posts.id"))
     parent_post = relationship("BlogPost", back_populates="comments")
     text = db.Column(db.String(1000), nullable=False)
-db.create_all()
+
 
 # USER LOADER FOR FLASK LOGIN
 @login_manager.user_loader
